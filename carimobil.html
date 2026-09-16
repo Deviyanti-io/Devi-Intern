@@ -41,7 +41,7 @@
                 <img src="asset/img_car.png" alt="Mobil Rental">
             </div>
         </main>
-        </div>
+    </div>
      <!-- Latar Belakang Gelap / Overlay -->
         <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
@@ -63,8 +63,34 @@
     </aside>
 
         <!-- Section 2 -->
-        <section class="tipe-section">
-            <div class="tipe-mobil-box"></div>
+    <section class="tipe-section">
+        <div class="tipe-mobil-box">
+            <!-- Kolom 1 -->
+            <div class="form-group">
+                <label>Tipe Driver</label>
+                <select class="form-input">
+                    <option value="disable selected">Pilih Tipe Driver</option>
+                    <option value="dengan-sopir">Dengan Sopir</option>
+                    <option value="tanpa-sopir">Tanpa Sopir (Lepas Kunci)</option>
+                </select>
+            </div>
+            <!-- Kolom 2 -->
+            <div class="form-group">
+                <label>Tanggal</label>
+                <input type="date" class="form-input" placeholder="Pilih Tanggal">
+            </div>
+            <!-- Kolom 3 -->
+            <div class="form-group">
+                <label>Waktu Jemput/Ambil</label>
+                <input type="time" class="form-input">
+            </div>
+            <!-- Kolom 4 -->
+            <div class="form-group">
+                <label>Jumlah Penumpang (Opsional)</label>
+                <input type="type" class="form-input">
+            </div>
+            <button class="btn-register btn-sidebar" type="button">Cari Mobil</button>
+        </div>
         </section>
 
 
