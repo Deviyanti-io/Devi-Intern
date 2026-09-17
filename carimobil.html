@@ -41,60 +41,81 @@
                 <img src="asset/img_car.png" alt="Mobil Rental">
             </div>
         </main>
+        </div>
+
+    
+
+       <!-- Section 2 -->
+        <div class="search-backdrop" id="searchBackdrop"></div>    
+        <section class="tipe-section">
+            <div class="tipe-mobil-box">
+                <!-- Kolom 1 -->
+                <div class="form-group custom-select-box" id="driverBox">
+                    <label>Tipe Driver</label>
+                    <div class="select-header">
+                        <span class="selected-val">Pilih Tipe Driver</span>
+                        <img src="asset/Vector.png" alt="arrow" class="field-icon arrow-icon">
+                    </div>
+                    <ul class="dropdown-list">
+                        <li data-value="Dengan Sopir">Dengan Sopir</li>
+                        <li data-value="Tanpa Sopir (Lepas Kunci)">Tanpa Sopir (Lepas Kunci)</li>
+                    </ul>
+                </div>
+
+        <!-- Kolom 2 -->
+        <div class="form-group custom-select-box" id="dateBox">
+            <label>Tanggal</label>
+            <div class="select-header">
+                <input type="text" id="inputDate" placeholder="Pilih Tanggal" readonly>
+                <img src="asset/fi_calendar.png" alt="calendar" class="field-icon">
+            </div>
+            
+            <div class="dropdown-list calendar-popup">
+                <div class="cal-header">
+                    <button type="button" class="cal-nav" id="prevMonth">&larr;</button>
+                    <span id="calMonthYear">September 2026</span>
+                    <button type="button" class="cal-nav" id="nextMonth">&rarr;</button>
+                </div>
+                <div class="cal-grid" id="calDatesGrid"></div>
+                <button type="button" class="btn-pilih-tgl" id="btnPilihTgl">Pilih Tanggal</button>
+            </div>
+        </div>
+
+        <!-- Kolom 3 -->
+        <div class="form-group custom-select-box" id="timeBox">
+            <label>Waktu Jemput/Ambil</label>
+            <div class="select-header">
+                <span class="selected-val">Pilih Waktu</span>
+                <img src="asset/fi_clock.png" alt="clock" class="field-icon">
+            </div>
+            <ul class="dropdown-list time-list">
+                <li data-value="08.00 WIB"><span>08.00</span> <span>WIB</span></li>
+                <li data-value="09.00 WIB" class="selected-time"><span>09.00</span> <span>WIB</span></li>
+                <li data-value="10.00 WIB"><span>10.00</span> <span>WIB</span></li>
+                <li data-value="11.00 WIB"><span>11.00</span> <span>WIB</span></li>
+                <li data-value="12.00 WIB"><span>12.00</span> <span>WIB</span></li>
+            </ul>
+        </div>
+
+        <!-- Kolom 4 -->
+        <div class="form-group">
+            <label>Jumlah Penumpang (Opsional)</label>
+            <div class="select-header">
+                <input type="number" placeholder="Jumlah Penumpang" min="1">
+                <img src="asset/fi_users.png" alt="users" class="field-icon">
+            </div>
+        </div>
+        
+        <button class="btn-cari" type="button">Cari Mobil</button>
     </div>
-     <!-- Latar Belakang Gelap / Overlay -->
-        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+</section>
 
-    <!-- Sidebar Menu Mobile -->
-        <aside class="sidebar" id="sidebar">
-        <div class="sidebar-header">
-        <h3>BCR</h3>
-        <button class="close-sidebar" id="closeSidebar" type="button" aria-label="Close Menu">&times;</button>
-        </div>
-
-        <ul class="sidebar-menu">
-            <li><a href="#services">Our Services</a></li>
-            <li><a href="#why-us">Why Us</a></li>
-            <li><a href="#testimonial">Testimony</a></li>
-            <li><a href="#faq">FAQ</a></li>
-        </ul>
-
-    <button class="btn-register btn-sidebar" type="button">Register</button>
-    </aside>
-
-        <!-- Section 2 -->
-    <section class="tipe-section">
-        <div class="tipe-mobil-box">
-            <!-- Kolom 1 -->
-            <div class="form-group">
-                <label>Tipe Driver</label>
-                <select class="form-input">
-                    <option value="disable selected">Pilih Tipe Driver</option>
-                    <option value="dengan-sopir">Dengan Sopir</option>
-                    <option value="tanpa-sopir">Tanpa Sopir (Lepas Kunci)</option>
-                </select>
-            </div>
-            <!-- Kolom 2 -->
-            <div class="form-group">
-                <label>Tanggal</label>
-                <input type="date" class="form-input" placeholder="Pilih Tanggal">
-            </div>
-            <!-- Kolom 3 -->
-            <div class="form-group">
-                <label>Waktu Jemput/Ambil</label>
-                <input type="time" class="form-input">
-            </div>
-            <!-- Kolom 4 -->
-            <div class="form-group">
-                <label>Jumlah Penumpang (Opsional)</label>
-                <input type="type" class="form-input">
-            </div>
-            <button class="btn-register btn-sidebar" type="button">Cari Mobil</button>
-        </div>
-        </section>
-
+    </script>
+    <script src="sidebar.js"></script>
+    <script src="dropdowncalendar.js"></script>
 
 </body>
+</html>
 <!-- Section 3  Footer -->
 <footer class="footer">
     <!-- Kolom 1: Alamat & Kontak -->

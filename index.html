@@ -43,25 +43,6 @@
             </div>
         </main>
         </div>
-     <!-- Latar Belakang Gelap / Overlay -->
-        <div class="sidebar-overlay" id="sidebarOverlay"></div>
-
-    <!-- Sidebar Menu Mobile -->
-        <aside class="sidebar" id="sidebar">
-        <div class="sidebar-header">
-        <h3>BCR</h3>
-        <button class="close-sidebar" id="closeSidebar" type="button" aria-label="Close Menu">&times;</button>
-        </div>
-
-        <ul class="sidebar-menu">
-            <li><a href="#services">Our Services</a></li>
-            <li><a href="#why-us">Why Us</a></li>
-            <li><a href="#testimonial">Testimony</a></li>
-            <li><a href="#faq">FAQ</a></li>
-        </ul>
-
-    <button class="btn-register btn-sidebar" type="button">Register</button>
-    </aside>
 
     <!-- Section 2 -->
     <section class="second-section" id="second">
@@ -372,6 +353,7 @@
     document.querySelectorAll('.sidebar-menu a').forEach(link => {
         link.addEventListener('click', closeNav);
     });
-</script>   
+</script>  
+<script src="sidebar.js"></script> 
 </body>
 </html>
