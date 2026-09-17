@@ -998,7 +998,7 @@ body {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
     padding: 24px;
     gap: 20px;
-    width: 383px;
+    width:auto;
     height: 586px;
     grid-template-columns: repeat(3, 1fr);
 }
@@ -1190,8 +1190,21 @@ body {
         margin-top: 8px;
     }
 }
+.grid-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 24px;
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .grid-card-container {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
 @media (max-width: 768px) {
-    .section-tipe-mobil {
-        padding: 40px 20px;
+    .grid-card-container {
+        grid-template-columns: 1fr;
     }
 }
