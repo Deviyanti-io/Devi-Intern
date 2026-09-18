@@ -1185,7 +1185,7 @@ details.refund-dropdown summary::-webkit-details-marker {
     box-sizing: border-box;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
     padding: 24px;
-    gap: 16px;
+    gap: 8px;
     width: 485px;
     height: fit-content;
     
@@ -1199,7 +1199,8 @@ details.refund-dropdown summary::-webkit-details-marker {
 .biayalain{
     /* display: flex; */
     flex-direction: column;
-    margin-bottom: 28px;
+    gap: 5px;
+    
 }
 .biayalain .rincian-list {
     padding-left: 22px;
@@ -1318,6 +1319,119 @@ details.refund-dropdown summary::-webkit-details-marker {
 .bank-item:hover .bank-name {
     border-color: #5cb85f;
 }
+/* --- Stepper & Subheader Pembayaran --- */
+.payment-step-bar {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 24px 100px 50px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.step-back-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.btn-back {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.step-back-title h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.stepper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.step-number {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    border: 1px solid #0D28A6;
+    color: #0D28A6;
+}
+
+.step.active .step-number {
+    background-color: #0D28A6;
+    color: #ffffff;
+}
+
+.step-text {
+    font-size: 12px;
+    color: #000000;
+}
+
+.step-line {
+    width: 28px;
+    height: 1px;
+    background-color: #0D28A6;
+}
+
+/* --- Kotak Detail Pesananmu (Read-only) --- */
+.order-detail-box {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 24px;
+    margin-top: -30px;
+    width: 100%;
+}
+
+.order-detail-heading {
+    font-size: 14px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 16px;
+}
+
+.order-detail-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.order-detail-col {
+    flex: 1;
+}
+
+.order-detail-col label {
+    font-size: 12px;
+    color: #8A8A8A;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.order-detail-col p {
+    font-size: 12px;
+    color: #3C3C3C;
+    font-weight: 400;
+}
+
+/* --- Accordion Header Total & Harga --- */
+
 .rincian-title {
     margin-bottom: 14px;
 }
@@ -1346,10 +1460,7 @@ details.refund-dropdown summary::-webkit-details-marker {
 }
 .termasuk {
     color: #5cb95f;
-    margin-left: auto;
-}
-/* .belum-termasuk-title {
-    margin-bottom: 8px;
+    margin-left: 0;
 }
 .belum-termasuk ul {
     margin: 0;
@@ -1360,30 +1471,54 @@ details.refund-dropdown summary::-webkit-details-marker {
 .belum-termasuk li {
     font-size: 15px;
     margin-bottom: 8px;
-} */
-
-
-/* Garis */
-.pemisah {
-    border: 0;
-    border-top: 1px solid #d0d0d0;
-    margin: 28px 0 20px;
 }
-
-
-/* Total */
-.total-pembayaran {
+.rincian-total {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 15px;
-    font-weight: 600;
-    margin-bottom: 28px;
+    margin-bottom: 16px;
 }
 
-.total-pembayaran span:last-child {
-    font-weight: 600;
+.total-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 14px;
 }
+
+.accordion-arrow {
+    font-size: 12px;
+    color: #3C3C3C;
+}
+
+.total-amount {
+    font-size: 14px;
+    font-weight: 700;
+    color: #000000;
+}
+
+/* --- Tombol Bayar (Disabled State sesuai Desain) --- */
+.btn-bayar {
+    width: 100%;
+    background-color: #5CB85F;
+    color: #ffffff;
+    border: none;
+    border-radius: 2px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-bayar.disabled,
+.btn-bayar:disabled {
+    background-color: #DEF1DF;
+    color: #ffffff;
+    cursor: not-allowed;
+}
+
 .btn-bayar {
     margin-top: auto;
     width: 100%;
@@ -1523,5 +1658,19 @@ details.refund-dropdown summary::-webkit-details-marker {
 @media (max-width: 768px) {
     .grid-card-container {
         grid-template-columns: 1fr;
+    }
+}
+/* Responsif Layar Kecil untuk Stepper & Detail */
+@media (max-width: 768px) {
+    .payment-step-bar {
+        padding: 16px 20px 40px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .order-detail-grid {
+        flex-direction: column;
+        gap: 12px;
+    
     }
 }

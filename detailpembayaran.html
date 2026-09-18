@@ -31,72 +31,55 @@
                     <span></span>
                 </button>
             </header>
+
+            <!-- Bar Navigasi Pembayaran -->
+             <div class="payment-step-bar">
+                <div class="step-back-title">
+                    <button class="btn-back" type="button" aria-label="Kembali">&#8592;</button>
+                    <h6>Pembayaran</h6>
+                </div>
+                <div class="stepper">
+                    <div class="step active">
+                        <span class="step-number">1</span>
+                        <span class="step-text">Pilih Metode</span>
+                    </div>
+                    <span class="step-line"></span>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <span class="step-text">Bayar</span>
+                    </div>
+                    <span class="step-line"></span>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <span class="step-text">Tiket</span>
+                    </div>
+                </div>
+             </div>
         </div>
-            <div class="tipehasil-box"></div>
-            <div class="search-backdrop" id="searchBackdrop"></div>    
-            <section class="tipe-section">
-                <div class="tipe-mobil-box">
-                    
-                    
-                    <!-- Kolom 1 -->
-                    <div class="form-group custom-select-box" id="driverBox">
-                        <div><h6>Pencarianmu</h6></div>
+         <!-- Section: Detail Pesananmu (Statis Read-only) -->
+        <section class="tipe-section">
+            <div class="order-detail-box">
+                <h6 class="order-detail-heading">Detail Pesananmu</h6>
+                <div class="order-detail-grid">
+                    <div class="order-detail-col">
                         <label>Tipe Driver</label>
-                        <div class="select-header">
-                            <span class="selected-val">Pilih Tipe Driver</span>
-                            <img src="asset/Vector.png" alt="arrow" class="field-icon arrow-icon">
-                        </div>
-                        <ul class="dropdown-list">
-                            <li data-value="Dengan Sopir">Dengan Sopir</li>
-                            <li data-value="Tanpa Sopir (Lepas Kunci)">Tanpa Sopir (Lepas Kunci)</li>
-                        </ul>
+                        <p>Dengan Sopir</p>
                     </div>
-
-            <!-- Kolom 2 -->
-            <div class="form-group custom-select-box" id="dateBox">
-                <label>Tanggal</label>
-                <div class="select-header">
-                    <input type="text" id="inputDate" placeholder="Pilih Tanggal" readonly>
-                    <img src="asset/fi_calendar.png" alt="calendar" class="field-icon">
-                </div>
-                
-                <div class="dropdown-list calendar-popup">
-                    <div class="cal-header">
-                        <button type="button" class="cal-nav" id="prevMonth">&larr;</button>
-                        <span id="calMonthYear">September 2026</span>
-                        <button type="button" class="cal-nav" id="nextMonth">&rarr;</button>
+                    <div class="order-detail-col">
+                        <label>Tanggal</label>
+                        <p>27 Mar 2022</p>
                     </div>
-                    <div class="cal-grid" id="calDatesGrid"></div>
-                    <button type="button" class="btn-pilih-tgl" id="btnPilihTgl">Pilih Tanggal</button>
+                    <div class="order-detail-col">
+                        <label>Waktu Jemput/Antar</label>
+                        <p>10.00 WIB</p>
+                    </div>
+                    <div class="order-detail-col">
+                        <label>Jumlah Penumpang (opsional)</label>
+                        <p>-</p>
+                    </div>
                 </div>
             </div>
-
-            <!-- Kolom 3 -->
-            <div class="form-group custom-select-box" id="timeBox">
-                <label>Waktu Jemput/Ambil</label>
-                <div class="select-header">
-                    <span class="selected-val">Pilih Waktu</span>
-                    <img src="asset/fi_clock.png" alt="clock" class="field-icon">
-                </div>
-                <ul class="dropdown-list time-list">
-                    <li data-value="08.00 WIB"><span>08.00</span> <span>WIB</span></li>
-                    <li data-value="09.00 WIB" class="selected-time"><span>09.00</span> <span>WIB</span></li>
-                    <li data-value="10.00 WIB"><span>10.00</span> <span>WIB</span></li>
-                    <li data-value="11.00 WIB"><span>11.00</span> <span>WIB</span></li>
-                    <li data-value="12.00 WIB"><span>12.00</span> <span>WIB</span></li>
-                </ul>
-            </div>
-
-            <!-- Kolom 4 -->
-            <div class="form-group">
-                <label>Jumlah Penumpang (Opsional)</label>
-                <div class="select-header">
-                    <input type="number" placeholder="Jumlah Penumpang" min="1">
-                    <img src="asset/fi_users.png" alt="users" class="field-icon">
-                </div>
-            </div>
-                </div>
-            </section>
+        </section> 
 
         <!--  Bank Transfer -->
         <section class="section-detail-mobil" id="detail-mobil">
@@ -125,30 +108,26 @@
                     </div>                 
                 </div>
 
-                <!-- Grid Kanan -->
-
+               <!-- Grid Kanan: Detail & Rincian Harga -->
                 <div class="grid-card-a">
-                        <h6 class="paket-title" style="margin-bottom: 8px;">Nama/Tipe Mobil</h6>
+                    <h6 class="paket-title" style="margin-bottom: 8px;">Nama/Tipe Mobil</h6>
 
-                        <div class="detail-card-spec" style="margin-bottom: 24;">
-                                <!-- Baris 1 -->
-                            <div class="spec-item">
-                                <img src="asset/fi_users.png" alt="user" class="spec-icon">
-                                <span> 4 orang </span>
-                            </div>
-                            <!-- Baris 2 -->
-                            <div class="spec-item">
-                                <img src="asset/fi_settings.png" alt="setting" class="spec-icon">
-                                <span> Manual </span>
-                            </div>
-                            <!-- Baris 3 -->
-                            <div class="spec-item">
-                                <img src="asset/fi_calendar.png" alt="tahun" class="spec-icon">
-                                <span> Tahun 2020 </span>
-                            </div>
+                    <div class="detail-card-spec" style="margin-bottom: 24px;">
+                        <div class="spec-item">
+                            <img src="asset/fi_users.png" alt="user" class="spec-icon">
+                            <span>4 orang</span>
                         </div>
+                        <div class="spec-item">
+                            <img src="asset/fi_settings.png" alt="setting" class="spec-icon">
+                            <span>Manual</span>
+                        </div>
+                        <div class="spec-item">
+                            <img src="asset/fi_calendar.png" alt="tahun" class="spec-icon">
+                            <span>Tahun 2020</span>
+                        </div>
+                    </div>
 
-                        <div class="total-pembayaran" style="margin-bottom: 16px;">
+                                            <div class="total-pembayaran" style="margin-bottom: 16px;">
                             <span>Total</span>
                             <span style="font-size: 14px;">Rp. 430.000</span>
                 </div>
@@ -189,18 +168,20 @@
                         </ul>
                     </div>
                     
-                    <!-- Garis -->
+                    <!-- Garis Pemisah -->
                     <hr class="pemisah">
-                    <!-- Total -->
+
+                    <!-- Total Bawah -->
                     <div class="total-pembayaran">
-                    <span>Total</span>
-                    <span>Rp 430.000</span>
+                        <span>Total</span>
+                        <span>Rp 430.000</span>
                     </div>
-          <button type="button" class="btn-bayar">Bayar</button>          
-            
-        
+
+                    <!-- Tombol Bayar (Default Disabled) -->
+                    <button type="button" class="btn-bayar disabled" disabled>Bayar</button>
+                </div>
+            </div>
         </section>
-    </body>
 <footer class="footer">
     <!-- Kolom 1: Alamat & Kontak -->
     <div class="footer-col footer-address">
