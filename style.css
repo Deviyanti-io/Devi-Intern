@@ -1260,6 +1260,8 @@ details.refund-dropdown summary::-webkit-details-marker {
     background-color: #439649;
 }  
 
+/* Page Pembayaran */
+
 .section-detail-mobil {
     padding: 60px 100px;
     max-width: 1440px;
@@ -1296,7 +1298,19 @@ details.refund-dropdown summary::-webkit-details-marker {
     padding: 16px 0;
     border-bottom: 1px solid #d0d0d0;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    position: relative;
+    transition: all 0.2s ease;
+}
+.bank-item.selected::after{
+    content: url(asset/pembayaran.png);
+    position: absolute;
+    right: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #5CB85F;
+}
+.bank-item.selected .bank-name {
+    border-color: #5CB85F;
 }
 .bank-item:last-child {
     border-bottom: none;
@@ -1319,6 +1333,7 @@ details.refund-dropdown summary::-webkit-details-marker {
 .bank-item:hover .bank-name {
     border-color: #5cb85f;
 }
+
 /* --- Stepper & Subheader Pembayaran --- */
 .payment-step-bar {
     max-width: 1440px;
@@ -1430,7 +1445,6 @@ details.refund-dropdown summary::-webkit-details-marker {
     font-weight: 400;
 }
 
-/* --- Accordion Header Total & Harga --- */
 
 .rincian-title {
     margin-bottom: 14px;
@@ -1498,7 +1512,7 @@ details.refund-dropdown summary::-webkit-details-marker {
     color: #000000;
 }
 
-/* --- Tombol Bayar (Disabled State sesuai Desain) --- */
+/* --- Tombol Bayar (Disabled) --- */
 .btn-bayar {
     width: 100%;
     background-color: #5CB85F;
@@ -1535,6 +1549,232 @@ details.refund-dropdown summary::-webkit-details-marker {
 .btn-pilih-bayar:hover {
     background-color: #439649;
 }  
+/* Page Instruksi Bayar BCA */
+.step-back-title h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #000000;
+    margin: 0;
+}
+
+.order-id {
+    font-size: 12px;
+    color: #000000;
+    margin-top: 4px;
+    display: block;
+}
+
+/* Status Stepper Telah Selesai */
+.stepper .step.completed .step-number {
+    background-color: #0D28A6;
+    color: #ffffff;
+    font-size: 11px;
+}
+
+.stepper .step-line.active {
+    background-color: #0D28A6;
+}
+
+/* Card Umum di Halaman Instruksi */
+.card-instruksi {
+    background-color: #ffffff;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.sub-heading {
+    font-size: 14px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 16px;
+}
+
+/* Countdown Card */
+.timer-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.timer-info h5 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.timer-info p {
+    font-size: 12px;
+    color: #8A8A8A;
+}
+
+.countdown-badge {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.time-box {
+    background-color: #FA2C5A;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 3px;
+    padding: 3px 6px;
+    min-width: 24px;
+    text-align: center;
+}
+
+.colon {
+    font-weight: 700;
+    color: #FA2C5A;
+}
+
+/* Transfer Info */
+.bank-account-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.bank-an {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.bank-label {
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.bank-owner {
+    font-size: 12px;
+    color: #8A8A8A;
+}
+
+/* Copy Input Box */
+.copy-input-group {
+    margin-bottom: 16px;
+}
+
+.copy-input-group label {
+    font-size: 12px;
+    color: #8A8A8A;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.copy-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #D0D0D0;
+    border-radius: 2px;
+    padding: 8px 12px;
+    background-color: #ffffff;
+}
+
+.copy-box span {
+    font-size: 13px;
+    color: #3C3C3C;
+}
+
+.copy-box .bold-text {
+    font-weight: 700;
+}
+
+.btn-copy {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+/* Tabs Instruksi */
+.instruction-tabs {
+    display: flex;
+    border-bottom: 1px solid #EEEEEE;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 12px 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #3C3C3C;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+    border-bottom: 2px solid #5CB85F;
+    color: #000000;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.instruction-list {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.instruction-list li {
+    font-size: 13px;
+    color: #8A8A8A;
+    line-height: 160%;
+}
+
+/* Kolom Kanan */
+.right-detail {
+    width: 400px;
+}
+
+.confirmation-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.confirm-text {
+    font-size: 14px;
+    line-height: 150%;
+    color: #3C3C3C;
+}
+
+.btn-primary-action {
+    width: 100%;
+    background-color: #5CB85F;
+    color: #ffffff;
+    border: none;
+    border-radius: 2px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary-action:hover {
+    background-color: #439649;
+}
 
 /* Responsif Layar Kecil*/
 @media (max-width: 992px) {

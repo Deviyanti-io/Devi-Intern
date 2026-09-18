@@ -98,7 +98,7 @@
                             </div>
                             <div class="bank-item">
                                 <div class="bank-name">BNI</div>
-                                <span>BNA Transfer</span>
+                                <span>BNI Transfer</span>
                             </div>
                             <div class="bank-item">
                                 <div class="bank-name">Mandiri</div>
@@ -182,6 +182,26 @@
                 </div>
             </div>
         </section>
+        <script>
+    // Ambil semua opsi bank dan tombol bayar
+    const bankItems = document.querySelectorAll('.bank-item');
+    const btnBayar = document.querySelector('.btn-bayar');
+
+    bankItems.forEach(item => {
+        item.addEventListener('click', () => {
+            // 1. Hilangkan seleksi dari bank lain
+            bankItems.forEach(b => b.classList.remove('selected'));
+
+            // 2. Tandai bank yang sedang diklik
+            item.classList.add('selected');
+
+            // 3. Aktifkan tombol Bayar
+            btnBayar.removeAttribute('disabled');
+            btnBayar.classList.remove('disabled');
+        });
+    });
+</script>
+    </body>
 <footer class="footer">
     <!-- Kolom 1: Alamat & Kontak -->
     <div class="footer-col footer-address">
