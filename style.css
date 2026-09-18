@@ -976,7 +976,9 @@ body {
     padding: 60px 100px;
     max-width: 1440px;
     margin: 0 auto;
+    display:flex;
     box-sizing: border-box;
+    gap: 40px;
 }
 
 .grid-card-container {
@@ -1024,6 +1026,7 @@ body {
     font-weight: 400;
     line-height: 1px;
     color: #000000;
+
 }
 .car-price {
     font-size: 16px;
@@ -1084,6 +1087,320 @@ body {
 .btn-pilih-mobil:hover {
     background-color: #439649;
 }
+
+/* PAGE DETAIL PAKET SEWA */
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    width: 705px;
+}
+
+    .section-tipe-mobil {
+    padding: 60px 100px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 ;
+    box-sizing: border-box;
+}
+
+
+.grid-container-paket {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 38px;
+     
+}
+
+ul.paket-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0 0 16px 0;
+    color: #8a8a8a;
+}
+
+ul.paket-list li {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 175%;
+    margin-bottom: 8px
+}
+details.refund-dropdown summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    list-style: none;
+    margin-bottom: 16px;
+}
+
+details.refund-dropdown summary::after {
+    content: url(asset/Vector.png);
+}
+
+details.refund-dropdown summary::-webkit-details-marker {
+    display: none;
+}
+.btn-left-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.btn-left {
+    width: max-content !important;
+    padding: 12px 24px;
+}
+
+.total-pembayaran {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    margin-top: auto;
+    margin-bottom: 16px;
+}
+.grid-card-paket {
+    background-color: #ffffff;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    padding: 24px;
+    gap: 20px;
+    width:705px;
+    height: auto ;
+}
+
+.grid-card-a {
+    background-color: #ffffff;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    padding: 24px;
+    gap: 16px;
+    width: 485px;
+    height: fit-content;
+    
+}
+
+.grid-card-vertikal p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+}
+.biayalain{
+    /* display: flex; */
+    flex-direction: column;
+    margin-bottom: 28px;
+}
+.biayalain .rincian-list {
+    padding-left: 22px;
+}
+.biayalain li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 0;
+    margin-bottom: 10px;
+    
+}
+.paket-title {
+    font-size: 14px;
+    font-style: bold;
+    font-weight: 700;
+    line-height: 20px;
+    color: #000000;
+}
+.car-paket {
+    font-size: 14px;
+    font-style: thin;
+    font-weight: 400;
+    line-height: 24px;
+    color: #000000;
+}
+.paket-desc p {
+    font-style: light;
+    display: flex;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #8a8a8a;
+    line-height: 175%;
+    
+}
+.card-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+.btn-pilih-pembayaran {
+    margin-top: auto;
+    width: 100%;
+    background-color: #5CB85F;
+    color: #ffffff;
+    border: none;
+    border-radius: 2px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.btn-pilih-pembayaran:hover {
+    background-color: #439649;
+}  
+
+.section-detail-mobil {
+    padding: 60px 100px;
+    max-width: 1440px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.grid-container-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 38px;
+}
+
+.left-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 705px;
+}
+.detail-card-spec {
+    display: flex;
+    flex-direction: center;
+    gap: 16px;
+
+}
+.bank-list {
+    display: flex;
+    flex-direction: column;
+}
+.bank-item {
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #d0d0d0;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.bank-item:last-child {
+    border-bottom: none;
+}
+.bank-name {
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    padding: 6px 16px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    margin-right: 16px;
+    width: 80px;
+    text-align: center;
+}
+.bank-item span {
+    font-size: 14px;
+    color: #000000;
+}
+.bank-item:hover .bank-name {
+    border-color: #5cb85f;
+}
+.rincian-title {
+    margin-bottom: 14px;
+}
+.rincian-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+.rincian-list {
+    margin: 0;
+    padding-left: 22px;
+    color: #333;
+}
+.rincian-list li {
+    font-size: 15px;
+    line-height: 1.6;
+}
+.harga-item {
+    font-size: 15px;
+    color: #333;
+    white-space: nowrap;
+}
+.rincian-lainnya {
+    margin-bottom: 12px;
+}
+.termasuk {
+    color: #5cb95f;
+    margin-left: auto;
+}
+/* .belum-termasuk-title {
+    margin-bottom: 8px;
+}
+.belum-termasuk ul {
+    margin: 0;
+    padding-left: 22px;
+    color: #555;
+}
+
+.belum-termasuk li {
+    font-size: 15px;
+    margin-bottom: 8px;
+} */
+
+
+/* Garis */
+.pemisah {
+    border: 0;
+    border-top: 1px solid #d0d0d0;
+    margin: 28px 0 20px;
+}
+
+
+/* Total */
+.total-pembayaran {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 28px;
+}
+
+.total-pembayaran span:last-child {
+    font-weight: 600;
+}
+.btn-bayar {
+    margin-top: auto;
+    width: 100%;
+    background-color: #5CB85F;
+    color: #ffffff;
+    border: none;
+    border-radius: 2px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.btn-pilih-bayar:hover {
+    background-color: #439649;
+}  
+
 /* Responsif Layar Kecil*/
 @media (max-width: 992px) {
     .navbar {

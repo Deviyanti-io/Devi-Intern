@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Binar Car Rental</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>   
+
+        <!-- Section 1 -->
+        <div class="car-wrapper">
+            <header class="navbar">
+                <div class="logo"></div>
+
+                <!-- Desktop -->
+                <div class="nav-container">
+                    <ul class="navmenu">
+                        <li><a href="#services">Our Service</a></li>
+                        <li><a href="#why-us">Why Us</a></li>
+                        <li><a href="#testimonial">Testimonial</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                    <button class="btn-register" type="button">Register</button>
+                </div>
+
+                <!-- Mobile -->
+                <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </header>
+        </div>
+            <div class="tipehasil-box"></div>
+            <div class="search-backdrop" id="searchBackdrop"></div>    
+            <section class="tipe-section">
+                <div class="tipe-mobil-box">
+                    
+                    
+                    <!-- Kolom 1 -->
+                    <div class="form-group custom-select-box" id="driverBox">
+                        <div><h6>Pencarianmu</h6></div>
+                        <label>Tipe Driver</label>
+                        <div class="select-header">
+                            <span class="selected-val">Pilih Tipe Driver</span>
+                            <img src="asset/Vector.png" alt="arrow" class="field-icon arrow-icon">
+                        </div>
+                        <ul class="dropdown-list">
+                            <li data-value="Dengan Sopir">Dengan Sopir</li>
+                            <li data-value="Tanpa Sopir (Lepas Kunci)">Tanpa Sopir (Lepas Kunci)</li>
+                        </ul>
+                    </div>
+
+            <!-- Kolom 2 -->
+            <div class="form-group custom-select-box" id="dateBox">
+                <label>Tanggal</label>
+                <div class="select-header">
+                    <input type="text" id="inputDate" placeholder="Pilih Tanggal" readonly>
+                    <img src="asset/fi_calendar.png" alt="calendar" class="field-icon">
+                </div>
+                
+                <div class="dropdown-list calendar-popup">
+                    <div class="cal-header">
+                        <button type="button" class="cal-nav" id="prevMonth">&larr;</button>
+                        <span id="calMonthYear">September 2026</span>
+                        <button type="button" class="cal-nav" id="nextMonth">&rarr;</button>
+                    </div>
+                    <div class="cal-grid" id="calDatesGrid"></div>
+                    <button type="button" class="btn-pilih-tgl" id="btnPilihTgl">Pilih Tanggal</button>
+                </div>
+            </div>
+
+            <!-- Kolom 3 -->
+            <div class="form-group custom-select-box" id="timeBox">
+                <label>Waktu Jemput/Ambil</label>
+                <div class="select-header">
+                    <span class="selected-val">Pilih Waktu</span>
+                    <img src="asset/fi_clock.png" alt="clock" class="field-icon">
+                </div>
+                <ul class="dropdown-list time-list">
+                    <li data-value="08.00 WIB"><span>08.00</span> <span>WIB</span></li>
+                    <li data-value="09.00 WIB" class="selected-time"><span>09.00</span> <span>WIB</span></li>
+                    <li data-value="10.00 WIB"><span>10.00</span> <span>WIB</span></li>
+                    <li data-value="11.00 WIB"><span>11.00</span> <span>WIB</span></li>
+                    <li data-value="12.00 WIB"><span>12.00</span> <span>WIB</span></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 4 -->
+            <div class="form-group">
+                <label>Jumlah Penumpang (Opsional)</label>
+                <div class="select-header">
+                    <input type="number" placeholder="Jumlah Penumpang" min="1">
+                    <img src="asset/fi_users.png" alt="users" class="field-icon">
+                </div>
+            </div>
+                </div>
+            </section>
+
+        <!--  Bank Transfer -->
+        <section class="section-detail-mobil" id="detail-mobil">
+            <div class="grid-container-detail">
+        <!-- Grid Kiri -->
+
+                <div class="left-detail">
+                    <div class="grid-card-paket">
+                        <h6 class="paket-title">Pilih Bank Transfer</h6>
+                        <p class="car-paket">Kamu bisa membayar dengan transfer melalui ATM, Internet Banking atau Mobile Banking</p>
+                        
+                        <div class="bank-list">
+                            <div class="bank-item">
+                                <div class="bank-name">BCA</div>
+                                <span>BCA Transfer</span>
+                            </div>
+                            <div class="bank-item">
+                                <div class="bank-name">BNI</div>
+                                <span>BNA Transfer</span>
+                            </div>
+                            <div class="bank-item">
+                                <div class="bank-name">Mandiri</div>
+                                <span>Mandiri Transfer</span>
+                            </div>
+                        </div>
+                    </div>                 
+                </div>
+
+                <!-- Grid Kanan -->
+
+                <div class="grid-card-a">
+                        <h6 class="paket-title" style="margin-bottom: 8px;">Nama/Tipe Mobil</h6>
+
+                        <div class="detail-card-spec" style="margin-bottom: 24;">
+                                <!-- Baris 1 -->
+                            <div class="spec-item">
+                                <img src="asset/fi_users.png" alt="user" class="spec-icon">
+                                <span> 4 orang </span>
+                            </div>
+                            <!-- Baris 2 -->
+                            <div class="spec-item">
+                                <img src="asset/fi_settings.png" alt="setting" class="spec-icon">
+                                <span> Manual </span>
+                            </div>
+                            <!-- Baris 3 -->
+                            <div class="spec-item">
+                                <img src="asset/fi_calendar.png" alt="tahun" class="spec-icon">
+                                <span> Tahun 2020 </span>
+                            </div>
+                        </div>
+
+                        <div class="total-pembayaran" style="margin-bottom: 16px;">
+                            <span>Total</span>
+                            <span style="font-size: 14px;">Rp. 430.000</span>
+                </div>
+
+                <!-- Rincian Harga -->
+                 <h6 class="paket-title" rincian-title>Harga</h6>
+
+                 <div class="rincian-flex">
+                    <ul class="rincian-list">
+                        <li>1 Mobil dengan sopir</li>
+                    </ul>
+                    <span class="harga-item">Rp. 430.000</span>
+                 </div>
+
+                 <!-- Biaya Lainnya -->
+                    <h6 class="paket-title rincian-lainnya">Biaya Lainnya</h6>
+
+                    <div class="biayalain">
+                        <ul class="rincian-list">
+                            <li>Pajak
+                                <span class="termasuk">Termasuk</span>
+                            </li>
+                            <li>
+                                <span>Biaya makan sopir</span>
+                                <span class="termasuk">Termasuk</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Belum termasuk -->
+
+                   <h6 class="paket-title rincian-lainnya">Belum termasuk</h6>
+
+                   <div class="rincian-list">
+                        <ul>
+                            <li>Bensin</li>
+                            <li>Tol dan Parkir</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Garis -->
+                    <hr class="pemisah">
+                    <!-- Total -->
+                    <div class="total-pembayaran">
+                    <span>Total</span>
+                    <span>Rp 430.000</span>
+                    </div>
+          <button type="button" class="btn-bayar">Bayar</button>          
+            
+        
+        </section>
+    </body>
+<footer class="footer">
+    <!-- Kolom 1: Alamat & Kontak -->
+    <div class="footer-col footer-address">
+        <p>Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</p>
+        <p>binarcarrental@gmail.com</p>
+        <p>081-233-334-808</p>
+    </div>
+
+    <!-- Kolom 2: Navigasi Cepat -->
+    <div class="footer-col footer-nav">
+        <ul>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#why-us">Why Us</a></li>
+            <li><a href="#testimonial">Testimonial</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+    </div>
+
+    <!-- Kolom 3: Media Sosial -->
+    <div class="footer-col footer-social">
+        <p>Connect with us</p>
+        <div class="social-icons">
+            <a href="#"><img src="asset/icon_facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="asset/icon_instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="asset/icon_twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="asset/icon_mail.png" alt="Email"></a>
+            <a href="#"><img src="asset/icon_twitch.png" alt="Twitch"></a>
+        </div>
+    </div>
+
+    <!-- Kolom 4: Hak Cipta & Logo -->
+    <div class="footer-col footer-copyright">
+        <p>Copyright Binar 2022</p>
+        <div class="logo"></div>
+    </div>
+</footer> 
+          
