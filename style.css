@@ -78,6 +78,7 @@ body {
 }
 
 .car-content h1 {
+    width: 550px;
     font-size: 36px;
     line-height: 150%;
     font-weight: 700;
