@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Binar Car Rental</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>   
+
+        <!-- Section 1 -->
+        <div class="car-wrapper">
+            <header class="navbar">
+                <div class="logo"></div>
+
+                <!-- Desktop -->
+                <div class="nav-container">
+                    <ul class="navmenu">
+                        <li><a href="#services">Our Service</a></li>
+                        <li><a href="#why-us">Why Us</a></li>
+                        <li><a href="#testimonial">Testimonial</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                    <button class="btn-register" type="button">Register</button>
+                </div>
+
+                <!-- Mobile -->
+                <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </header>
+
+            <!-- Bar Navigasi Pembayaran -->
+             <div class="payment-step-bar">
+                <div class="step-back-title">
+                    <button class="btn-back" type="button" aria-label="Kembali">&#8592;</button>
+                    <h6>Pembayaran</h6>
+                </div>
+                <div class="stepper">
+                    <div class="step active">
+                        <span class="step-number">1</span>
+                        <span class="step-text">Pilih Metode</span>
+                    </div>
+                    <span class="step-line"></span>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <span class="step-text">Bayar</span>
+                    </div>
+                    <span class="step-line"></span>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <span class="step-text">Tiket</span>
+                    </div>
+                </div>
+             </div>
+        </div>
+         <!-- Section: Detail Pesananmu (Statis Read-only) -->
+        <section class="tipe-section">
+            <div class="order-detail-box">
+                <h6 class="order-detail-heading">Detail Pesananmu</h6>
+                <div class="order-detail-grid">
+                    <div class="order-detail-col">
+                        <label>Tipe Driver</label>
+                        <p>Dengan Sopir</p>
+                    </div>
+                    <div class="order-detail-col">
+                        <label>Tanggal</label>
+                        <p>27 Mar 2022</p>
+                    </div>
+                    <div class="order-detail-col">
+                        <label>Waktu Jemput/Antar</label>
+                        <p>10.00 WIB</p>
+                    </div>
+                    <div class="order-detail-col">
+                        <label>Jumlah Penumpang (opsional)</label>
+                        <p>-</p>
+                    </div>
+                </div>
+            </div>
+        </section> 
+
+        <!--  Bank Transfer -->
+        <section class="section-detail-mobil" id="detail-mobil">
+            <div class="grid-container-detail">
+        <!-- Grid Kiri -->
+
+                <div class="left-detail">
+                    <div class="grid-card-paket">
+                        <h6 class="paket-title">Pilih Bank Transfer</h6>
+                        <p class="car-paket">Kamu bisa membayar dengan transfer melalui ATM, Internet Banking atau Mobile Banking</p>
+                        
+                        <div class="bank-list">
+                            <div class="bank-item">
+                                <div class="bank-name">BCA</div>
+                                <span>BCA Transfer</span>
+                            </div>
+                            <div class="bank-item">
+                                <div class="bank-name">BNI</div>
+                                <span>BNI Transfer</span>
+                            </div>
+                            <div class="bank-item">
+                                <div class="bank-name">Mandiri</div>
+                                <span>Mandiri Transfer</span>
+                            </div>
+                        </div>
+                    </div>                 
+                </div>
+
+               <!-- Grid Kanan: Detail & Rincian Harga -->
+                <div class="grid-card-a">
+                    <h6 class="paket-title" style="margin-bottom: 8px;">Nama/Tipe Mobil</h6>
+
+                    <div class="detail-card-spec" style="margin-bottom: 24px;">
+                        <div class="spec-item">
+                            <img src="asset/fi_users.png" alt="user" class="spec-icon">
+                            <span>4 orang</span>
+                        </div>
+                        <div class="spec-item">
+                            <img src="asset/fi_settings.png" alt="setting" class="spec-icon">
+                            <span>Manual</span>
+                        </div>
+                        <div class="spec-item">
+                            <img src="asset/fi_calendar.png" alt="tahun" class="spec-icon">
+                            <span>Tahun 2020</span>
+                        </div>
+                    </div>
+
+                            <div class="total-pembayaran" style="margin-bottom: 16px;">
+                            <span>Total</span>
+                            <span style="font-size: 14px;">Rp. 430.000</span>
+                </div>
+
+                <!-- Rincian Harga -->
+                 <h6 class="paket-title" rincian-title>Harga</h6>
+
+                 <div class="rincian-flex">
+                    <ul class="rincian-list">
+                        <li>1 Mobil dengan sopir</li>
+                    </ul>
+                    <span class="harga-item">Rp. 430.000</span>
+                 </div>
+
+                 <!-- Biaya Lainnya -->
+                    <h6 class="paket-title rincian-lainnya">Biaya Lainnya</h6>
+
+                    <div class="biayalain">
+                        <ul class="rincian-list">
+                            <li>Pajak
+                                <span class="termasuk">Termasuk</span>
+                            </li>
+                            <li>
+                                <span>Biaya makan sopir</span>
+                                <span class="termasuk">Termasuk</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Belum termasuk -->
+
+                   <h6 class="paket-title rincian-lainnya">Belum termasuk</h6>
+
+                   <div class="rincian-list">
+                        <ul>
+                            <li>Bensin</li>
+                            <li>Tol dan Parkir</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Garis Pemisah -->
+                    <hr class="pemisah">
+
+                    <!-- Total Bawah -->
+                    <div class="total-pembayaran">
+                        <span>Total</span>
+                        <span>Rp 430.000</span>
+                    </div>
+
+                    <!-- Tombol Bayar (Default Disabled) -->
+                    <button type="button" class="btn-bayar disabled" disabled>Bayar</button>
+                    <!-- <div class="bca-bayar-contain">
+                        <source srcset="instruksipembayaranbca.html">
+                    </div>
+                    <button type="button" class="btn-bayar enabled" enabled>Bayar</button> -->
+                </div>
+            </div>
+        </section>
+        <script>
+    // Ambil semua opsi bank dan tombol bayar
+    const bankItems = document.querySelectorAll('.bank-item');
+    const btnBayar = document.querySelector('.btn-bayar');
+
+    bankItems.forEach(item => {
+        item.addEventListener('click', () => {
+            // 1. Hilangkan seleksi dari bank lain
+            bankItems.forEach(b => b.classList.remove('selected'));
+
+            // 2. Tandai bank yang sedang diklik
+            item.classList.add('selected');
+
+            // 3. Aktifkan tombol Bayar
+            btnBayar.removeAttribute('disabled');
+            btnBayar.classList.remove('disabled');
+        });
+    });
+</script>
+    </body>
+<footer class="footer">
+    <!-- Kolom 1: Alamat & Kontak -->
+    <div class="footer-col footer-address">
+        <p>Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</p>
+        <p>binarcarrental@gmail.com</p>
+        <p>081-233-334-808</p>
+    </div>
+
+    <!-- Kolom 2: Navigasi Cepat -->
+    <div class="footer-col footer-nav">
+        <ul>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#why-us">Why Us</a></li>
+            <li><a href="#testimonial">Testimonial</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+    </div>
+
+    <!-- Kolom 3: Media Sosial -->
+    <div class="footer-col footer-social">
+        <p>Connect with us</p>
+        <div class="social-icons">
+            <a href="#"><img src="asset/icon_facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="asset/icon_instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="asset/icon_twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="asset/icon_mail.png" alt="Email"></a>
+            <a href="#"><img src="asset/icon_twitch.png" alt="Twitch"></a>
+        </div>
+    </div>
+
+    <!-- Kolom 4: Hak Cipta & Logo -->
+    <div class="footer-col footer-copyright">
+        <p>Copyright Binar 2022</p>
+        <div class="logo"></div>
+    </div>
+</footer> 
+          
