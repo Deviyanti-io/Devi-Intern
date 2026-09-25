@@ -1,0 +1,49 @@
+<script>
+    const dataPenjualanPakAldi = [
+        {
+            namaProduct: "Sepatu Futsal Nike Vapor Academy 8",
+            hargaSatuan: 760000,
+            kategori: "Sepatu Sport",
+            totalTerjual: 101
+        },
+        {
+            namaProduct: "Sepatu Warrior Tristan Black Brown High Original",
+            hargaSatuan: 960000,
+            kategori: "Sepatu Sneaker",
+            totalTerjual: 53
+        },
+        {
+            namaProduct: "Sepatu Warrior Tristan Maroon High Original",
+            hargaSatuan: 360000,
+            kategori: "Sepatu Sneaker",
+            totalTerjual: 54
+        },
+        {
+            namaProduct: "Sepatu Warrior Rainbow Tosca Corduroy [BNIB] Original",
+            hargaSatuan: 120000,
+            kategori: "Sepatu Sneaker",
+            totalTerjual: 87
+        }
+    ];
+
+    function hitungTotalPenjualan(dataPenjualan) {
+        if (dataPenjualan === undefined) {
+            return "ERROR";
+        }
+
+        if (!Array.isArray(dataPenjualan)) {
+            return "ERROR: Invalid data type";
+        }
+
+        let total = 0;
+        for (const penjualan of dataPenjualan) {
+            if (typeof penjualan.totalTerjual === "number") {
+                total += penjualan.totalTerjual;
+            }
+        }
+
+        return total;
+    }
+
+    console.log(hitungTotalPenjualan(dataPenjualanPakAldi));
+</script>

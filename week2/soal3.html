@@ -1,0 +1,24 @@
+<script>
+    function getAngkaTerbesarKedua(dataNumbers) {
+        if (dataNumbers === undefined) {
+            return "ERROR";
+        }
+        if (!Array.isArray(dataNumbers)) {
+            return "ERROR: Invalid data type";
+        }
+        const validNumbers = dataNumbers.filter(
+            num => typeof num === "number"
+        );
+        if (validNumbers.length < 2) {
+            return "ERROR: Array harus memiliki setidaknya dua angka";
+        }
+        const numbers = [...new Set(validNumbers)].sort((a, b) => b - a);
+
+        if (numbers.length < 2) {
+            return "ERROR: Tidak ada angka terbesar kedua yang valid (angka unik kurang dari dua)";
+        }
+
+        return numbers[1];
+    }
+    console.log(getAngkaTerbesarKedua([9, 4, 7, 7, 4, 3, 2, 2, 8]));
+</script>

@@ -1,0 +1,48 @@
+<script>
+    function isValid(s) {
+        var kurung = [];
+
+        for (var i = 0; i < s.length; i++) {
+            var karakter = s[i];
+
+            // Jika tanda kurung pembuka
+            if (karakter == '(' || karakter == '[' || karakter == '{') {
+                kurung.push(karakter);
+            }
+
+            // Jika tanda kurung penutup
+            else {
+                if (kurung.length == 0) {
+                    return false;
+                }
+
+                var terakhir = kurung.pop();
+
+                if (karakter == ')' && terakhir != '(') {
+                    return false;
+                }
+
+                if (karakter == ']' && terakhir != '[') {
+                    return false;
+                }
+
+                if (karakter == '}' && terakhir != '{') {
+                    return false;
+                }
+            }
+        }
+
+        // Kalau masih ada kurung yang belum ditutup
+        if (kurung.length == 0) {
+            return true;
+        }
+
+        return false;
+    }
+
+    console.log(isValid("([]{})")); // true
+    console.log(isValid("{}"));   // true
+    console.log(isValid("(())"));    // true
+    console.log(isValid("("));       // false
+    console.log(isValid("{[()]}")); // true
+</script>

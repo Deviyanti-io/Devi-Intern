@@ -1,0 +1,20 @@
+<script>
+    function findThreeSum(nums, target) {
+
+        for (var i = 0; i < nums.length; i++) {
+            for (var j = i + 1; j < nums.length; j++) {
+                for (var k = j + 1; k < nums.length; k++) {
+                    if (nums[i] + nums[j] + nums[k] === target) {
+                        return [i, j, k];
+                    }
+                }
+            }
+        }
+
+        return [null, null, null];
+    }
+
+    console.log(findThreeSum([1, 2, 3, 4], 9)); 
+    console.log(findThreeSum([2, 7, 1], 10));
+    console.log(findThreeSum([2, 8, 0], 10));
+</script>

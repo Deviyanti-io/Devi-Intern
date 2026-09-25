@@ -1,0 +1,14 @@
+<script>
+    function lift(liftsekarang, tujuan1, akhir1, tujuan2, akhir2) {
+            var total = 0; // total semua jarak yang ditempuh
+
+            total += Math.abs(liftsekarang - tujuan1); // dari lift sekarang ke tujuan pertama
+            total += Math.abs(tujuan1 - akhir1); // dari tujuan pertama ke tujuan pertama 
+            total += Math.abs(akhir1 - tujuan2); // dari tujuan pertama ke tujuan kedua 
+            total += Math.abs(tujuan2 - akhir2); // dari tujuan kedua ke tujuan kedua 
+            return total;
+        }
+
+    console.log(lift(2, 8, 3, 9, 2)); 
+
+</script>
